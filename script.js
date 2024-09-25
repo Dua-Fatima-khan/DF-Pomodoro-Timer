@@ -2,10 +2,13 @@ let start = document.getElementById("start");
 let stop = document.getElementById("stop");
 let reset = document.getElementById("reset");
 let timer = document.getElementById("timer");
+let sound= new Audio('alert.mp3')
 let isRunning = false;
 let timeLeft = 25 * 60;
 let interval;
-
+function playSound(){
+    sound.play()
+}
 function updateTimer() {
   let minutes = Math.floor(timeLeft / 60);
   let seconds = timeLeft % 60;
@@ -28,10 +31,12 @@ start.addEventListener("click", function () {
       timeLeft--;
       updateTimer();
       if (timeLeft == 0) {
+        playSound()
         clearInterval(interval);
         alert(`Time's up`);
         timeLeft = 1500;
         updateTimer();
+     
       }
     }, 1000);
   }
