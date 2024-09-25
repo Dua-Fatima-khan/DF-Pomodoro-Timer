@@ -88,6 +88,10 @@ gap: 2em;
     align-items: center;
     font-size: 1.5em;
     cursor: pointer;
+    transition: .2s all ease;
+}
+.box .buttons i:hover{
+    background-color: rgb(175, 172, 172);
 }
 @media(max-width:786px){
     nav ul{
