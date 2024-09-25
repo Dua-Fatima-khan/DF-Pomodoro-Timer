@@ -89,7 +89,16 @@ gap: 2em;
     font-size: 1.5em;
     cursor: pointer;
 }
-
+@media(max-width:786px){
+    nav ul{
+      
+        width: 9 0%;
+    }
+    nav ul li{
+        font-size: 1.2em;
+        font-weight: 900;
+    }
+}
 @media(max-width:500px){
     .box{
         width: 400px;
